@@ -1,38 +1,38 @@
 #!/usr/bin/python3
-"""Module that defines a Square class with property-based size access."""
+"""Module that defines a Square class with property access."""
 
 
 class Square:
-    """A class that defines a square by its size with property access.
-    
+    """A class that defines a square with property-based access.
+
     Attributes:
         __size (int): The size of the square (private).
     """
-    
+
     def __init__(self, size=0):
         """Initialize a new Square instance.
-        
+
         Args:
             size (int, optional): The size of the square. Defaults to 0.
         """
         self.size = size
-    
+
     @property
     def size(self):
         """Get the size of the square.
-        
+
         Returns:
             int: The size of the square.
         """
         return self.__size
-    
+
     @size.setter
     def size(self, value):
         """Set the size of the square with validation.
-        
+
         Args:
             value (int): The new size of the square.
-            
+
         Raises:
             TypeError: If value is not an integer.
             ValueError: If value is less than 0.
@@ -42,10 +42,10 @@ class Square:
         if value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
-    
+
     def area(self):
         """Calculate and return the area of the square.
-        
+
         Returns:
             int: The area of the square (size * size).
         """

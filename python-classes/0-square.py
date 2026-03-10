@@ -4,7 +4,7 @@
 
 class Square:
     """An empty class that defines a square.
-    
+
     This class currently has no attributes or methods.
     """
     pass
