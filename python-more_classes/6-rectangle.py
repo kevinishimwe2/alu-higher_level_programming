@@ -4,7 +4,7 @@
 
 class Rectangle:
     """Rectangle class with private width and height attributes
-    
+
     Attributes:
         number_of_instances (int): number of Rectangle instances
     """
@@ -13,7 +13,7 @@ class Rectangle:
 
     def __init__(self, width=0, height=0):
         """Initialize a Rectangle instance
-        
+
         Args:
             width (int): width of the rectangle (default 0)
             height (int): height of the rectangle (default 0)
@@ -30,10 +30,10 @@ class Rectangle:
     @width.setter
     def width(self, value):
         """Setter for width attribute with validation
-        
+
         Args:
             value (int): width value
-            
+
         Raises:
             TypeError: if width is not an integer
             ValueError: if width is less than 0
@@ -52,10 +52,10 @@ class Rectangle:
     @height.setter
     def height(self, value):
         """Setter for height attribute with validation
-        
+
         Args:
             value (int): height value
-            
+
         Raises:
             TypeError: if height is not an integer
             ValueError: if height is less than 0
@@ -72,7 +72,7 @@ class Rectangle:
 
     def perimeter(self):
         """Calculate and return the rectangle perimeter
-        
+
         Returns 0 if width or height is 0
         """
         if self.__width == 0 or self.__height == 0:
@@ -81,12 +81,12 @@ class Rectangle:
 
     def __str__(self):
         """Return string representation of the rectangle using # character
-        
+
         Returns empty string if width or height is 0
         """
         if self.__width == 0 or self.__height == 0:
             return ""
-        
+
         rectangle = []
         for i in range(self.__height):
             rectangle.append("#" * self.__width)
