@@ -1,0 +1,51 @@
+===========================
+How to use 1-my_list.py
+===========================
+
+This module defines MyList that inherits from list.
+
+Usage
+=====
+
+``print_sorted`` prints the list sorted in ascending order.
+
+::
+
+    >>> MyList = __import__('1-my_list').MyList
+    >>> my_list = MyList()
+    >>> my_list.append(3)
+    >>> my_list.append(1)
+    >>> my_list.append(2)
+    >>> my_list.print_sorted()
+    [1, 2, 3]
+
+The original list is not modified:
+
+::
+
+    >>> print(my_list)
+    [3, 1, 2]
+
+An empty list:
+
+::
+
+    >>> my_list2 = MyList()
+    >>> my_list2.print_sorted()
+    []
+
+A list already sorted:
+
+::
+
+    >>> my_list3 = MyList([1, 2, 3])
+    >>> my_list3.print_sorted()
+    [1, 2, 3]
+
+A list with negative numbers:
+
+::
+
+    >>> my_list4 = MyList([-1, -5, 3, 0])
+    >>> my_list4.print_sorted()
+    [-5, -1, 0, 3]
